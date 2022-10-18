@@ -9,7 +9,7 @@ async def pull_git():
 
 
 @app.post("/pull/docker")
-def pull_docker(request: Request):
-    payload = request.json()
+async def pull_docker(request: Request):
+    payload = await request.json()
     print(payload)
     return {'status': 200}
